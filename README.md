@@ -41,8 +41,12 @@ You can now access the website at [`localhost:3000`](http://localhost:3000)
 To access the admin panel, use the following credentials:
 - Email: admin@synapsis.com
 - Password: 12345678
-you can access admin panel at [`localhost:3000/admin`](http://localhost:3000/admin)
+you can access admin panel at [`https://blog-apps-synapsis.vercel.app/admin`](https://blog-apps-synapsis.vercel.app/admin)
 
 ## Usage Tutorial
 For a detailed tutorial on how to use the website, please visit the following YouTube link: [`youtube`](https://www.youtube.com/watch?v=wfKrUXhpGvo)
+
+## Deployment
+Visit The Website [`https://blog-apps-synapsis.vercel.app/`](https://blog-apps-synapsis.vercel.app/)
+
 
