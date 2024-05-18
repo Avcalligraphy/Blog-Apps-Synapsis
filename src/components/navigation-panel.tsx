@@ -1,3 +1,4 @@
+'use client'
 import { clearUser } from '@/redux/store/userSlice';
 import Link from 'next/link';
 import React from 'react'
@@ -20,7 +21,7 @@ export default function NavigationPanel({user} : NavigationPanelProps) {
 
     const signOutUser = () => {
       dispatch(clearUser())
-      localStorage.removeItem("user");
+      window?.localStorage?.removeItem("user");
       router.push("/auth");
     };
   return (

@@ -1,4 +1,4 @@
-
+'use client'
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer, { setUser } from "./userSlice";
 

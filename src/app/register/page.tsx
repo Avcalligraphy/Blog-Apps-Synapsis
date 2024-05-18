@@ -51,7 +51,7 @@ export default function Register() {
       });
 
       dispatch(setUser(response.data));
-      localStorage.setItem("user", JSON.stringify(response.data));
+      window?.localStorage?.setItem("user", JSON.stringify(response.data));
       
       setFormData({
         name: '',

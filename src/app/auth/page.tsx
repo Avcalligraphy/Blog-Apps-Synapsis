@@ -57,7 +57,7 @@ export default function Auth() {
       const user = response.data;
       if (user && user.email === formData.email && user.status === 'active') {
         dispatch(setUser(user));
-        localStorage.setItem("user", JSON.stringify(user));
+        window?.localStorage?.setItem("user", JSON.stringify(user));
         router.push("/dashboard");
       } else {
         setError("Email atau password salah");

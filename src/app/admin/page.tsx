@@ -16,7 +16,15 @@ export default function Admin() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState<boolean>(false);
   const user = useSelector((state: RootState) => state.user.userData);
-  const token = localStorage.getItem("token");
+  const [token, setToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedToken = window.localStorage.getItem("token");
+      setToken(storedToken);
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -54,7 +62,7 @@ export default function Admin() {
       const user = response.data;
       if (user && user.email === formData.email && formData.password === '12345678') {
         dispatch(setUser(user));
-        localStorage.setItem("user", JSON.stringify(user));
+        window?.localStorage?.setItem("user", JSON.stringify(user));
         router.push("/dashboard");
       } else {
         toast.error("Email atau password salah");
@@ -83,9 +91,9 @@ export default function Admin() {
           );
           const user = response.data;
           dispatch(setUser(user));
-          localStorage.setItem("user", JSON.stringify(user));
-          localStorage.removeItem("token");
-          localStorage.setItem("token", user.id);
+          window?.localStorage?.setItem("user", JSON.stringify(user));
+          window?.localStorage?.removeItem("token");
+          window?.localStorage?.setItem("token", user.id);
           router.push("/dashboard");
         } catch (createError) {
           toast.error("Gagal membuat user admin");

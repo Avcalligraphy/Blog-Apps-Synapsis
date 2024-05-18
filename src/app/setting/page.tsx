@@ -58,7 +58,7 @@ export default function Setting() {
       );
 
       dispatch(setUser(response.data));
-      localStorage.setItem("user", JSON.stringify(response.data));
+      window?.localStorage?.setItem("user", JSON.stringify(response.data));
 
       setFormData({
         name: response.data.name,
