@@ -17,6 +17,7 @@ export default function Admin() {
   const [loading, setLoading] = useState<boolean>(false);
   const user = useSelector((state: RootState) => state.user.userData);
   const [token, setToken] = useState<string | null>(null);
+  console.log("Token",token)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
