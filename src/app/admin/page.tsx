@@ -68,8 +68,8 @@ export default function Admin() {
       } else {
         toast.error("Email atau password salah");
       }
-    } catch (error) {
-      if (axios.isAxiosError(error) && error.response?.status === 404) {
+    } catch (error: any) {
+      if (axios.isAxiosError(error) || error.response?.status === 404 || 422) {
         try {
           const apiUrl = process.env.NEXT_PUBLIC_API_URL;
           const accessToken = process.env.NEXT_PUBLIC_ACCESS_TOKEN;
@@ -150,19 +150,6 @@ export default function Admin() {
           {loading ? "Loading..." : "Sign In"}
         </button>
 
-
-        <div className="relative w-full flex items-center gap-2 my-10 opacity-10 uppercase text-black font-bold">
-          <hr className="w-1/2 border-black" />
-          <p>or</p>
-          <hr className="w-1/2 border-black" />
-        </div>
-
-        <p className="mt-6 text-dark-grey text-xl text-center">
-          Do you already have an account?
-          <Link href="/register" className="underline text-black text-xl ml-1">
-            Sign up here.
-          </Link>
-        </p>
       </form>
     </section>
   );
