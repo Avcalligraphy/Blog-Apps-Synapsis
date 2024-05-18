@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## <div align="center">Blog Apps Synapsis</div>
 
-## Getting Started
+<div align="center">
+  <img src="https://ibb.co.com/XLT9Mg2" alt="app-logo" border="0" width="150px">
+</div>
 
-First, run the development server:
+<br/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Welcome to the Blog Apps Synapsis. This guide will help you set up and run the website on your local machine.
+
+## How to Run Project
+
+To run the project, you can follow the steps below.
+- Clone the repository to your local machine using the following command:
+```shell
+$ git clone https://github.com/Avcalligraphy/Blog-Apps-Synapsis.git
+```
+- Rename the .env.example file to .env:
+```shell
+$ mv .env.example .env
+```
+- Open the .env file and add your NEXT_PUBLIC_ACCESS_TOKEN. You can obtain this token from GoREST.
+```shell
+$ NEXT_PUBLIC_ACCESS_TOKEN=your_token_here
+```
+- Install the necessary npm packages:
+```shell
+$ npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Once the installation is complete, start the development server:
+```shell
+$ npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can now access the website at [`localhost:3000`](http://localhost:3000)
 
-## Learn More
+## Admin Login
+To access the admin panel, use the following credentials:
+- Email: admin@synapsis.com
+- Password: 12345678
+you can access admin panel at [`localhost:3000/admin`](http://localhost:3000/admin)
 
-To learn more about Next.js, take a look at the following resources:
+## Usage Tutorial
+For a detailed tutorial on how to use the website, please visit the following YouTube link: [`localhost:3000/admin`](http://localhost:3000/admin)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
