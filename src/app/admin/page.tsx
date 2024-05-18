@@ -51,7 +51,7 @@ export default function Admin() {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
       const accessToken = process.env.NEXT_PUBLIC_ACCESS_TOKEN;
-      const response = await axios.get(`${apiUrl}/users/${token}`, {
+      const response = await axios.get(`${apiUrl}/users/${token === null ? '6914371' : token}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
