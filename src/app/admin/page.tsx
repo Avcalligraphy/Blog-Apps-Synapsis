@@ -17,7 +17,6 @@ export default function Admin() {
   const [loading, setLoading] = useState<boolean>(false);
   const user = useSelector((state: RootState) => state.user.userData);
   const [token, setToken] = useState<string | null>(null);
-  console.log("Token",token)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -68,8 +67,8 @@ export default function Admin() {
       } else {
         toast.error("Email atau password salah");
       }
-    } catch (error: any) {
-      if (axios.isAxiosError(error) || error.response?.status === 404 || 422) {
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 404) {
         try {
           const apiUrl = process.env.NEXT_PUBLIC_API_URL;
           const accessToken = process.env.NEXT_PUBLIC_ACCESS_TOKEN;
