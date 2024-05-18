@@ -116,24 +116,12 @@ export default function Setting() {
             </select>
             <i className={"fi fi-rr-venus-mars " + " input-icon"}></i>
           </div>
-          <div className="relative w-[100%] mb-4">
-            <select
-              name="status"
-              value={formData.status}
-              onChange={handleChange}
-              className="input-box "
-              required
-            >
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
-            </select>
-            <i className={"fi fi-rr-check-circle " + " input-icon"}></i>
-          </div>
           <InputBox
             name="password"
             type="password"
             placeholder="Password"
             icon="fi-rr-key"
+            disable = {true}
             value={
               user?.email === "admin@synapsis.com"
                 ? "12345678"
