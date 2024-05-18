@@ -1,7 +1,7 @@
 ## <div align="center">Blog Apps Synapsis</div>
 
 <div align="center">
-  <img src="https://ibb.co.com/XLT9Mg2" alt="app-logo" border="0" width="150px">
+  <img src="https://i.ibb.co.com/wzqvDkm/Group-501.png" alt="app-logo" border="0" width="150px" height="150px" >
 </div>
 
 <br/>
@@ -44,5 +44,5 @@ To access the admin panel, use the following credentials:
 you can access admin panel at [`localhost:3000/admin`](http://localhost:3000/admin)
 
 ## Usage Tutorial
-For a detailed tutorial on how to use the website, please visit the following YouTube link: [`localhost:3000/admin`](http://localhost:3000/admin)
+For a detailed tutorial on how to use the website, please visit the following YouTube link: [`youtube`](https://www.youtube.com/watch?v=wfKrUXhpGvo)
 
