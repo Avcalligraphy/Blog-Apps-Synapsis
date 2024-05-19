@@ -22,8 +22,9 @@ export default function AuthenticatedDashboard({ children }: {children: ReactNod
   }
   return (
     <section className="w-full">
-      <NavbarComponents />
-      <SideBar>{children}</SideBar>
+      <NavbarComponents>
+        <SideBar>{children}</SideBar>
+      </NavbarComponents>
     </section>
   );
 }

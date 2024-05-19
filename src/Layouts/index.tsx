@@ -6,10 +6,11 @@ interface NavbarProps {
 }
 export default function AuthenticatedUser({ children }: NavbarProps) {
   return (
-    <div className='w-full' >
-        <NavbarComponents />
+    <div className="w-full">
+      <NavbarComponents>
         <div>{children}</div>
-      </div>
+      </NavbarComponents>
+    </div>
   );
 }
 

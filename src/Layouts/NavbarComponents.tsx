@@ -3,10 +3,10 @@
 import NavigationPanel from "@/components/navigation-panel";
 import { RootState } from "@/redux/store/store";
 import Link from "next/link";
-import React, { use, useState } from "react";
+import React, { ReactNode, use, useState } from "react";
 import { useSelector } from "react-redux";
 
-export default function NavbarComponents() {
+export default function NavbarComponents({children}: {children:ReactNode}) {
   const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);
   const [userNavPanel, setUserNavPanel] = useState(false);
   const handleUserNavPanel = () => {
@@ -21,6 +21,7 @@ export default function NavbarComponents() {
   const user = useSelector((state: RootState) => state.user.userData);
 
   return (
+    <>
     <section className="navbar z-50">
       <Link href="/" className="flex-none w-10">
         <img src="/imgs/logo-dark.png" className="w-full" />
@@ -59,5 +60,7 @@ export default function NavbarComponents() {
         )}
       </div>
     </section>
+    <section>{children}</section>
+    </>
   );
 }
